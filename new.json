@@ -1,0 +1,30 @@
+{
+  "shapes": [
+    {
+      "type": "Entity",
+      "name": "Patient",
+      "fields": [
+        {"name": "PatientNumber", "key": "primary"},
+        {"name": "FullName"},
+        {"name": "BedNumber"},
+        {"name": "WardNumber"},
+        {"name": "WardName"}
+      ]
+    },
+    {
+      "type": "Entity",
+      "name": "Medication",
+      "fields": [
+        {"name": "DrugNumber", "key": "primary"},
+        {"name": "Name"},
+        {"name": "Description"},
+        {"name": "Dosage"},
+        {"name": "MethodOfAdmin"},
+        {"name": "UnitsPerDay"},
+        {"name": "StartDate"},
+        {"name": "FinishDate"},
+        {"name": "PatientNumber", "key": "foreign", "relation": "Patient"}
+      ]
+    }
+  ]
+}
